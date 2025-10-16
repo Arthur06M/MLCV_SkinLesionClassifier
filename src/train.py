@@ -1,3 +1,5 @@
+import torch
+
 def train_epoch(model, loader, criterion, optimizer, device):
     model.train()
     total_loss = 0
