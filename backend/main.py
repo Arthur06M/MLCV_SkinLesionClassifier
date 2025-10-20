@@ -31,7 +31,7 @@ app.add_middleware(
 PROJECT_ROOT = Path(__file__).parent.parent  # backend/main.py -> project root
 MODEL_PATH = PROJECT_ROOT / 'models' / 'best_model.pth'
 
-@app.get("/")
+@app.get("/api")
 async def root():
     return {"message": "Skin Lesion Classifier API", "status": "running"}
 
@@ -48,7 +48,7 @@ async def load_model():
     
     print("Model loaded successfully!")
 
-@app.get("/health")
+@app.get("/api/health")
 async def health():
     return {
         "status": "ok",
@@ -57,7 +57,7 @@ async def health():
         "classes": class_names
     }
 
-@app.post("/predict")
+@app.post("/api/predict")
 async def predict(file: UploadFile = File(...)):
     #check if image
     if not file.content_type.startswith('image/'):

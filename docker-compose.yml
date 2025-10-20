@@ -1,13 +1,11 @@
-version: "3.9"
-
 services:
   skin-lesion-api:
     build:
       context: .
       dockerfile: Dockerfile.backend
     container_name: skin-lesion-api
-    networks:
-      - skin-lesion-network
+    ports:
+     - "8484:8484"
 
   skin-lesion-frontend:
     build:
@@ -18,10 +16,3 @@ services:
       - "3000:80"
     depends_on:
       - skin-lesion-api
-    networks:
-      - skin-lesion-network
-
-
-networks:
-  skin-lesion-network:
-    driver: bridge
