@@ -1,6 +1,8 @@
 # Skin Lesion Classifier
 
-AI-powered skin lesion analysis using deep learning for educational purposes
+AI-powered skin lesion analysis using deep learning for educational purposes.
+
+Try it on https://skin-lesion.arthurmoine.fr
 
 ## Overview
 
