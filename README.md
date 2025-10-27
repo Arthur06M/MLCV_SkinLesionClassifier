@@ -44,7 +44,7 @@ A full-stack machine learning application that classifies skin lesions into 7 ca
 
 **Key Design Decisions:**
 - Split by `lesion_id` (not image) to prevent data leakage
-- CPU-optimized inference (~500ms on Raspberry Pi)
+- CPU-optimized inference (~500ms on Raspberry Pi 4)
 - Grad-CAM visualization for model interpretability
 
 ---
